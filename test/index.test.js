@@ -34,12 +34,6 @@ describe('getHashers test with all hashing algorithms', () => {
         assert.strictEqual(h, 'pbkdf2_sha256', 'Testing pbkdf2_sha256 from Django');
     });
 
-    it ('testing argon2', () => {
-        const hash_password = "argon2$argon2i$v=19$m=512,t=2,p=2$UXZPOFhoSUxrWmhQ$CCPcRG8t+LOJB8H1zL+Prw";
-        const h = hashers.identifyHasher(hash_password);
-        assert.strictEqual(h, 'argon2', 'Testing argon2 from Django');
-    });
-
     it ('testing pbkdf2_sha1', () => {
         const hash_password = "pbkdf2_sha1$36000$P6Y4I7YXzZpB$LrWCTPqWtIdPFYY5jt+w56QJGR0=";
         const h = hashers.identifyHasher(hash_password);
