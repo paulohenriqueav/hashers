@@ -49,10 +49,6 @@ module.exports.getHasher = function(algorithm) {
             return new this.PBKDF2PasswordHasher();
         }
 
-        case "argon2": {
-            return new this.Argon2PasswordHasher();
-        }
-
         case "pbkdf2_sha1": {
             return new this.PBKDF2SHA1PasswordHasher();
         }
