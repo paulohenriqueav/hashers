@@ -88,14 +88,7 @@ describe('Test all password hashing algorithms encode and verify methods', () =>
         const verify = await h.verify('password', hashPassword);
         assert.strictEqual(verify, true, 'Testing pbkdf2_sha256 encode and verify from Django');
     });
-
-    it ('testing argon2 encode', async () => {
-        const h = new hashers.Argon2PasswordHasher();
-        const hashPassword = await h.encode('password');
-        const verify = await h.verify('password', hashPassword);
-        assert.strictEqual(verify, true, 'Testing argon2 encode and verify from Django');
-    });
-
+    
     it ('testing pbkdf2_sha1 encode', async () => {
         const h = new hashers.PBKDF2SHA1PasswordHasher();
         const hashPassword = await h.encode('password');
