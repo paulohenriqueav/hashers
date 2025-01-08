@@ -5,7 +5,6 @@
 
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
-const argon2 = require('argon2-ffi').argon2i;
 const util = require('util');
 const randomBytes = util.promisify(crypto.randomBytes);
 
